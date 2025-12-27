@@ -1457,6 +1457,22 @@ body.arabic-mode .form-group textarea:not(:placeholder-shown) + label {
         transform: rotate(360deg);
     }
 }
+@media (max-width: 1386PX){
+    .lang-switcher{
+        position: fixed;
+        top: 70px;
+        right: 20px;
+        z-index: 1001;
+    }
+}
+@media (max-width: 768px) {
+    .lang-switcher{
+        position: fixed;
+        top: 70px; 
+        right: 20px;
+        z-index: 1001;
+    }
+}
 
 /* Responsive Design for Navigation */
 @media (max-width: 768px) {
