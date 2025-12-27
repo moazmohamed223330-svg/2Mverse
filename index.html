@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>2Mverse | Digital Marketing & Branding</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        .success-modal, .manual-copy-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            backdrop-filter: blur(10px);
+        }
+        
+        .modal-content {
+            background: linear-gradient(145deg, rgba(26, 26, 26, 0.98) 0%, rgba(10, 10, 10, 0.99) 100%);
+            padding: 50px 40px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            border: 2px solid #00e0ff;
+            box-shadow: 0 0 60px rgba(0, 224, 255, 0.4);
+        }
+        
+        .manual-copy-modal .modal-content {
+            border-color: #ff4d4d;
+            text-align: left;
+        }
+        
+        .manual-copy-modal textarea {
+            width: 100%;
+            padding: 15px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 10px;
+            color: #fff;
+            margin: 20px 0;
+            resize: vertical;
+            min-height: 150px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .btn-loader {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+        <button id="langToggle" class="lang-btn">
+            <i class="fas fa-language"></i>
+            <span class="lang-text">AR</span>
+        </button>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-text">2M<span class="logo-accent">verse</span></span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li><a href="#services" data-en="Services" data-ar="خدماتنا">Services</a></li>
+                <li><a href="#about" data-en="About" data-ar="عن الشركة">About</a></li>
+                <li><a href="#portfolio" data-en="Portfolio" data-ar="أعمالنا">Portfolio</a></li>
+                <li><a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+            </ul>
+            
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line" data-en="Towards a Unique" data-ar="نحو تجربة ">Towards a Unique</span>
+                    <span class="title-line accent" data-en="Digital World" data-ar="رقمية مختلفة ">Digital World</span>
+                </h1>
+                <p class="hero-subtitle" data-en="We create strong visual identities and impactful digital experiences that leave a lasting impression in the business world." data-ar="بنبني هويات بصرية وتجارب رقمية بتوصل فكرتك صح وتسيب أثر حقيقي في شغلِك.">
+                    We create strong visual identities and impactful digital experiences that leave a lasting impression in the business world.
+                </p>
+                <a href="#services" class="btn" data-en="Discover Our Services" data-ar="شوف نقدر نساعدك إزاي">Discover Our Services</a>
+            </div>
+            
+            <div class="hero-visual">
+                <!-- تم إزالة الدوائر الزرقاء الكبيرة التي كانت تخفي اللوجو -->
+                <div class="floating-element">
+                    <img src="images/logo.png" alt="2Mverse Logo" class="floating-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title" data-en="Our <span class='accent'>Distinguished</span> Services" data-ar="خدماتنا <span class='accent'>المتميزة</span>">Our <span class="accent">Distinguished</span> Services</h2>
+            <p class="section-subtitle" data-en="We provide a comprehensive set of marketing and digital solutions to build your brand" data-ar="بنقدّم حلول رقمية وتسويقية متكاملة تساعدك تبني براند واضح، قوي، وسهل يتشاف">
+                We provide a comprehensive set of marketing and digital solutions to build your brand
+            </p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 data-en="Branding & Visual Identity" data-ar="البراندينج والهوية البصرية">Branding & Visual Identity</h3>
+                    <p data-en="Designing a complete visual identity that expresses your brand values and stands out from competitors." data-ar="نصمّم هوية بصرية تمثّلك بجد من أول اللوجو لحد شكل البراند في عين العميل">
+                        Designing a complete visual identity that expresses your brand values and stands out from competitors.
+                    </p>
+                    <div class="service-wave"></div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3 data-en="Digital Marketing" data-ar="التسويق الرقمي">Digital Marketing</h3>
+                    <p data-en="Well-planned marketing campaigns on social media platforms and search engines to increase your reach." data-ar="حملات تسويق ذكية ومبنية على هدف توصل بيها للناس الصح، في الوقت الصح">
+                        Well-planned marketing campaigns on social media platforms and search engines to increase your reach.
+                    </p>
+                    <div class="service-wave"></div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 data-en="Promotional Videos" data-ar="الفيديوهات الدعائية">Promotional Videos</h3>
+                    <p data-en="Creating high-quality promotional videos that tell your brand story and attract your target audience." data-ar="بنعمل فيديوهات تحكي حكاية البراند وتشد الانتباه من أول ثانية">
+                        Creating high-quality promotional videos that tell your brand story and attract your target audience.
+                    </p>
+                    <div class="service-wave"></div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <h3 data-en="Content Writing" data-ar="كتابة المحتوى">Content Writing</h3>
+                    <p data-en="Professional content writing that engages your audience and improves your search engine ranking." data-ar="محتوى مفهوم، جذاب، وسهل يخلي الناس تقرأ، تفهم، وتثق">
+                        Professional content writing that engages your audience and improves your search engine ranking.
+                    </p>
+                    <div class="service-wave"></div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 data-en="Website Design" data-ar="تصميم مواقع">Website Design</h3>
+                    <p data-en="Designing responsive, attractive websites that provide an excellent user experience and reflect your brand identity." data-ar="مواقع سريعة، شكلها حلو، وسهلة الاستخدام وبتشتغل صح على أي جهاز">
+                        Designing responsive, attractive websites that provide an excellent user experience and reflect your brand identity.
+                    </p>
+                    <div class="service-wave"></div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 data-en="Mobile Applications" data-ar="برامج الهاتف">Mobile Applications</h3>
+                    <p data-en="Developing innovative mobile applications for iOS and Android that meet your business needs." data-ar="تطبيقات عملية ومصممة حسب احتياجك واحتياج عميلك">
+                        Developing innovative mobile applications for iOS and Android that meet your business needs.
+                    </p>
+                    <div class="service-wave"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title" data-en="About <span class='accent'>2Mverse</span>" data-ar="عن <span class='accent'>الشركة</span>">About <span class="accent">2Mverse</span></h2>
+                <p class="about-text" data-en="2Mverse is a dynamic digital marketing and branding agency that specializes in creating unique digital experiences. As a startup, we combine fresh creativity with modern technology to deliver innovative solutions for our clients." data-ar="2Mverse وكالة تسويق رقمي وبراندينج بنشتغل على تحويل الأفكار لحلول رقمية حقيقية. كشركة ناشئة، بنعتمد على الإبداع، التفكير الذكي، واستخدام التكنولوجيا بشكل يخدم الهدف… مش يعقّد الدنيا">
+                    2Mverse is a dynamic digital marketing and branding agency that specializes in creating unique digital experiences. As a startup, we combine fresh creativity with modern technology to deliver innovative solutions for our clients.
+                </p>
+                
+                <div class="qualities">
+                    <div class="quality-item">
+                        <div class="quality-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 data-en="Innovation" data-ar="الابتكار">Innovation</h3>
+                        <p data-en="We bring fresh, innovative ideas to every project" data-ar="بنفكر دايمًا برا الصندوق وبنحب نقدملك الجديد">We bring fresh, innovative ideas to every project</p>
+                    </div>
+                    <div class="quality-item">
+                        <div class="quality-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 data-en="Passion" data-ar="الشغف">Passion</h3>
+                        <p data-en="We are passionate about creating outstanding digital experiences" data-ar="بنشتغل بشغف وده بيبان في كل تفصيلة">We are passionate about creating outstanding digital experiences</p>
+                    </div>
+                    <div class="quality-item">
+                        <div class="quality-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 data-en="Collaboration" data-ar="التعاون">Collaboration</h3>
+                        <p data-en="We work closely with our clients to achieve their goals" data-ar="بنشتغل مع العميل مش عليه النجاح عندنا شغل جماعي">We work closely with our clients to achieve their goals</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-visual">
+                <div class="visual-element">
+                    <div class="rotating-logo-container">
+                        <img src="images/logo.png" alt="2Mverse Logo" class="rotating-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title" data-en="Our <span class='accent'>Portfolio</span>" data-ar="أعمالنا <span class='accent'>المميزة</span>">Our <span class="accent">Portfolio</span></h2>
+            <p class="section-subtitle" data-en="We're just starting our journey. Check back soon to see our amazing projects!" data-ar="إحنا في بداية الرحلة، بس شغالين على مشاريع قوية هتشوفوها هنا قريب جدًا !">
+                We're just starting our journey. Check back soon to see our amazing projects!
+            </p>
+            
+            <div class="portfolio-empty">
+                <div class="empty-state">
+                    <i class="fas fa-rocket"></i>
+                    <h3 data-en="Our Portfolio is Coming Soon!" data-ar="أعمالنا قريبًا!">Our Portfolio is Coming Soon!</h3>
+                    <p data-en="We are working on exciting projects that will be showcased here very soon. Stay tuned!" data-ar="شغلنا الجاي في الطريق ومستنيين نشاركك بيه">
+                        We are working on exciting projects that will be showcased here very soon. Stay tuned!
+                    </p>
+                    <div class="coming-soon-badge">
+                        <span data-en="Coming Soon" data-ar="قريبًا">Coming Soon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-en="Get In <span class='accent'>Touch</span>" data-ar="ابق على <span class='accent'>اتصال</span>">Get In <span class="accent">Touch</span></h2>
+            <p class="section-subtitle" data-en="Ready to take your brand to the next level? Contact us today!" data-ar="لو عندك فكرة، مشروع، أو حتى لسه بتبدأ كلّمنا… ونشوف نطلع أحسن نتيجة سوا">
+                Ready to take your brand to the next level? Contact us today!
+            </p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3 data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</h3>
+                            <p>2mverseteam@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h3 data-en="WhatsApp" data-ar="واتساب">WhatsApp</h3>
+                            <p>01006981745</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-facebook"></i>
+                        <div>
+                            <h3 data-en="Facebook" data-ar="فيسبوك">Facebook</h3>
+                            <p>2Mverse Agency</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-instagram"></i>
+                        <div>
+                            <h3 data-en="Instagram" data-ar="إنستجرام">Instagram</h3>
+                            <p>@2mverse</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <!-- FormSubmit Integration with improvements -->
+                    <form action="https://formsubmit.co/2mverseteam@gmail.com" method="POST" id="contactForm">
+                        <!-- FormSubmit Settings -->
+                        <input type="hidden" name="_subject" value="📩 New Contact - 2Mverse Website">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="javascript:showSuccessMessage()">
+                        <input type="hidden" name="_autoresponse" value="Thank you for contacting 2Mverse! We have received your message and will respond within 24 hours.">
+                        
+                        <!-- HoneyPot -->
+                        <input type="text" name="_honey" style="display:none">
+                        
+                        <!-- Additional Info -->
+                        <input type="hidden" name="source" value="2Mverse Website Contact Form">
+                        <input type="hidden" name="date" id="formDate">
+                        
+                        <!-- Form Fields -->
+                        <div class="form-group">
+                            <input type="text" placeholder=" " id="name" name="name" required minlength="2">
+                            <label for="name" data-en="Your Name" data-ar="اسمك">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder=" " id="email" name="email" required>
+                            <label for="email" data-en="Your Email" data-ar="بريدك الإلكتروني">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder=" " id="phone" name="phone">
+                            <label for="phone" data-en="Phone Number (Optional)" data-ar="رقم الهاتف (اختياري)">Phone Number (Optional)</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder=" " id="subject" name="subject" required>
+                            <label for="subject" data-en="Subject" data-ar="الموضوع">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder=" " id="message" name="message" rows="4" required minlength="10"></textarea>
+                            <label for="message" data-en="Your Message" data-ar="رسالتك">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn" id="submitBtn" data-en="Send Message" data-ar="إرسال الرسالة">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loader"><i class="fas fa-spinner fa-spin"></i></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Social Media Links -->
+            <div class="social-media-section">
+                <h3 data-en="Follow Us On Social Media" data-ar="تابعنا على وسائل التواصل الاجتماعي">Follow Us On Social Media</h3>
+                <div class="social-buttons">
+                    <a href="https://www.facebook.com/profile.php?id=61582962007833" target="_blank" class="social-btn facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span data-en="Facebook" data-ar="فيسبوك">Facebook</span>
+                    </a>
+                    <a href="https://www.instagram.com/2mverse/" target="_blank" class="social-btn instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span data-en="Instagram" data-ar="إنستجرام">Instagram</span>
+                    </a>
+                    <a href="https://wa.me/2001006981745" target="_blank" class="social-btn whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span data-en="WhatsApp" data-ar="واتساب">WhatsApp</span>
+                    </a>
+                    <a href="mailto:2mverseteam@gmail.com" class="social-btn email">
+                        <i class="fas fa-envelope"></i>
+                        <span data-en="Email" data-ar="البريد">Email</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="2Mverse Logo" class="footer-logo-img">
+                    <p data-en="Creating digital experiences that matter." data-ar="بنبني حلول رقمية ليها معنى وقيمة">Creating digital experiences that matter.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h3>
+                    <ul>
+                        <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                        <li><a href="#services" data-en="Services" data-ar="خدماتنا">Services</a></li>
+                        <li><a href="#about" data-en="About" data-ar="عن الشركة">About</a></li>
+                        <li><a href="#portfolio" data-en="Portfolio" data-ar="أعمالنا">Portfolio</a></li>
+                        <li><a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h3 data-en="Our Services" data-ar="خدماتنا">Our Services</h3>
+                    <ul>
+                        <li><a href="#services" data-en="Branding" data-ar="البراندينج">Branding</a></li>
+                        <li><a href="#services" data-en="Digital Marketing" data-ar="التسويق الرقمي">Digital Marketing</a></li>
+                        <li><a href="#services" data-en="Video Production" data-ar="إنتاج الفيديو">Video Production</a></li>
+                        <li><a href="#services" data-en="Mobile Applications" data-ar="برامج هاتف">Mobile Applications</a></li>
+                        <li><a href="#services" data-en="Web Design" data-ar="تصميم المواقع">Web Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h3 data-en="Connect With Us" data-ar="تواصل معنا">Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61582962007833" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/2mverse/" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/2001006981745" target="_blank" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:2mverseteam@gmail.com" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-envelope"></i> 2mverseteam@gmail.com</p>
+                        <p><i class="fab fa-whatsapp"></i> 01006981745</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p data-en="&copy; 2024 2Mverse. All rights reserved. | Digital Marketing & Branding Agency" data-ar="&copy; 2024 2Mverse. جميع الحقوق محفوظة. | وكالة التسويق الرقمي والبراندينج">&copy; 2024 2Mverse. All rights reserved. | Digital Marketing & Branding Agency</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="success-modal">
+        <div class="modal-content">
+            <i class="fas fa-check-circle"></i>
+            <h3 id="modalTitle">Message Sent!</h3>
+            <p id="modalMessage">Thank you for contacting us. We will get back to you soon.</p>
+            <button class="btn close-modal">OK</button>
+        </div>
+    </div>
+
+    <!-- Manual Copy Modal -->
+    <div id="manualCopyModal" class="manual-copy-modal">
+        <div class="modal-content">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h3 id="copyModalTitle">Form Submission Issue</h3>
+            <p id="copyModalMessage">Please copy the message below and send it manually to: 2mverseteam@gmail.com</p>
+            <textarea id="copyTextarea" readonly></textarea>
+            <div class="modal-buttons">
+                <button class="btn copy-btn" id="copyBtn">Copy to Clipboard</button>
+                <button class="btn close-copy-modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
